@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/kyle/random/OOC_projects/module4/build",
+  "command": "/usr/bin/c++  -I/home/kyle/random/OOC_projects/module4/inc -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/tictactoe.dir/src/pokerhand.cpp.o -c /home/kyle/random/OOC_projects/module4/src/pokerhand.cpp",
+  "file": "/home/kyle/random/OOC_projects/module4/src/pokerhand.cpp",
+  "output": "CMakeFiles/tictactoe.dir/src/pokerhand.cpp.o"
+},
+{
+  "directory": "/home/kyle/random/OOC_projects/module4/build",
+  "command": "/usr/bin/c++  -I/home/kyle/random/OOC_projects/module4/inc -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/tictactoe.dir/src/main.cpp.o -c /home/kyle/random/OOC_projects/module4/src/main.cpp",
+  "file": "/home/kyle/random/OOC_projects/module4/src/main.cpp",
+  "output": "CMakeFiles/tictactoe.dir/src/main.cpp.o"
+}
+]
