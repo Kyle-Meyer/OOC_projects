@@ -1,8 +1,34 @@
 cmake_minimum_required(VERSION 3.10)
+project(TicTacToe VERSION 1.0 LANGUAGES CXX)
 
-project(Stastical_analysis)
-
-set(CMAKE_CXX_STANDARD 11)
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(Stat Statistical_analysis.cpp)
+# Compiler warnings
+if(MSVC)
+    add_compile_options(/W4)
+else()
+    add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
+# Include directories
+include_directories(${PROJECT_SOURCE_DIR}/inc)
+
+# Source files
+set(SOURCES
+    src/main.cpp
+    src/board.cpp
+    src/computer_player.cpp
+    src/human_player.cpp
+    src/test_suite.cpp
+)
+
+# Main executable
+add_executable(tictactoe ${SOURCES})
+
+# Print build information
+message(STATUS "C++ Compiler: ${CMAKE_CXX_COMPILER}")
+message(STATUS "C++ Standard: ${CMAKE_CXX_STANDARD}")
+message(STATUS "Build Type: ${CMAKE_BUILD_TYPE}")

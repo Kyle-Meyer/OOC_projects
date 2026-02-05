@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/kyle/random/OOC_projects/module3/build",
+  "command": "/usr/bin/c++  -I/home/kyle/random/OOC_projects/module3/inc -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/tictactoe.dir/src/main.cpp.o -c /home/kyle/random/OOC_projects/module3/src/main.cpp",
+  "file": "/home/kyle/random/OOC_projects/module3/src/main.cpp",
+  "output": "CMakeFiles/tictactoe.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/kyle/random/OOC_projects/module3/build",
+  "command": "/usr/bin/c++  -I/home/kyle/random/OOC_projects/module3/inc -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/tictactoe.dir/src/board.cpp.o -c /home/kyle/random/OOC_projects/module3/src/board.cpp",
+  "file": "/home/kyle/random/OOC_projects/module3/src/board.cpp",
+  "output": "CMakeFiles/tictactoe.dir/src/board.cpp.o"
+},
+{
+  "directory": "/home/kyle/random/OOC_projects/module3/build",
+  "command": "/usr/bin/c++  -I/home/kyle/random/OOC_projects/module3/inc -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/tictactoe.dir/src/computer.cpp.o -c /home/kyle/random/OOC_projects/module3/src/computer.cpp",
+  "file": "/home/kyle/random/OOC_projects/module3/src/computer.cpp",
+  "output": "CMakeFiles/tictactoe.dir/src/computer.cpp.o"
+},
+{
+  "directory": "/home/kyle/random/OOC_projects/module3/build",
+  "command": "/usr/bin/c++  -I/home/kyle/random/OOC_projects/module3/inc -std=c++17 -Wall -Wextra -Wpedantic -o CMakeFiles/tictactoe.dir/src/human_player.cpp.o -c /home/kyle/random/OOC_projects/module3/src/human_player.cpp",
+  "file": "/home/kyle/random/OOC_projects/module3/src/human_player.cpp",
+  "output": "CMakeFiles/tictactoe.dir/src/human_player.cpp.o"
+}
+]

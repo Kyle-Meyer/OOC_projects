@@ -1,0 +1,14 @@
+.
+├── CMakeLists.txt
+├── inc
+│   ├── board.hpp
+│   ├── computer_player.hpp
+│   └── human_player.hpp
+├── src
+│   ├── board.cpp
+│   ├── computer.cpp
+│   ├── human_player.cpp
+│   └── main.cpp
+└── tree.txt
+
+2 directories, 9 files
