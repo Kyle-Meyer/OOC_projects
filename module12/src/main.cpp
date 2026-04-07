@@ -1,6 +1,7 @@
 #include "game.hpp"
 #include "human_player.hpp"
 #include "computer_player.hpp"
+#include "gui_app.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -25,8 +26,18 @@ static int promptInt(const std::string& msg, int lo, int hi)
    }
 }
 
-int main()
+int main(int argc, char* argv[])
 {
+   // Pass --gui (or -g) to launch the Dear ImGui interface
+   for (int i = 1; i < argc; ++i) {
+      if (std::string(argv[i]) == "--gui" || std::string(argv[i]) == "-g") {
+         runGui();
+         return 0;
+      }
+   }
+
+   // ---- original CLI mode below ----
+   {
    std::cout << "=============================\n";
    std::cout << "   5-Card Draw Poker\n";
    std::cout << "=============================\n\n";
@@ -60,4 +71,5 @@ int main()
    game.run();
 
    return 0;
+   } // end CLI block
 }
