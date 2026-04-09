@@ -198,17 +198,21 @@ Running `./poker --gui` (or `./poker -g`) opens a windowed GUI built with [Dear 
 
 ### Architecture
 
-The game logic is completely unchanged. The GUI layer adds three new components:
+The game logic is completely unchanged. The GUI layer adds five new components:
 
 | Component | Role |
 |---|---|
 | `GuiState` | Shared data between the game thread and the render thread |
 | `GuiPlayer` | `Player` subclass whose `placeBet` / `chooseDiscards` block on a condition variable until the UI provides input |
-| `runGui()` | GLFW/ImGui render loop; also owns the game thread |
+| `CardTextures` | Loads 52 card PNGs + a back image via stb_image; exposes OpenGL texture IDs |
+| `LogBuf` | `std::streambuf` subclass that captures `std::cout` lines into `GuiState::log` |
+| `runGui()` | GLFW/ImGui render loop; owns the game thread and all screen state |
 
 **Thread model:** `game.run()` executes in a `std::thread`. The main thread runs the ImGui render loop. `GuiPlayer` communicates with the render thread via `GuiState` (mutex + `std::condition_variable`).
 
-**stdout capture:** A custom `LogBuf` (`std::streambuf` subclass) is installed on `std::cout` inside the game thread. It appends each line to `GuiState::log`, which the log panel reads under the mutex.
+**stdout capture:** `LogBuf` is installed on `std::cout` inside the game thread. It appends each newline-terminated line to `GuiState::log` under the mutex. The log panel reads this vector each frame under the same mutex.
+
+**ImGui layout:** `io.IniFilename` is set to `nullptr` so the panel layout is never saved to disk.
 
 ### `GuiState` (shared state)
 
@@ -216,33 +220,54 @@ The game logic is completely unchanged. The GUI layer adds three new components:
 enum class GuiAction { None, Bet, Discard };
 
 struct GuiState {
-    std::mutex mtx;
+    std::mutex              mtx;
     std::condition_variable cv;
 
     std::vector<std::string> log;       // captured stdout lines
 
-    GuiAction         action;           // what the UI should show
-    int               toCall, pot;      // bet context
-    std::vector<Card> hand;             // current hand to display
+    GuiAction         action   = GuiAction::None;   // what the right panel shows
+    int               toCall   = 0;
+    int               pot      = 0;
+    std::vector<Card> hand;             // current hand (5 cards)
     std::vector<bool> discardSel;       // toggled by the user (size 5)
 
-    bool actionReady;                   // set by render thread to unblock GuiPlayer
-    int  betResult;                     // -1 = fold, >=0 = chips put in
-    bool gameOver;
+    bool actionReady = false;           // set by render thread to unblock GuiPlayer
+    int  betResult   = 0;              // -1 = fold, >=0 = chips put in
+
+    bool gameOver = false;
 };
 ```
 
 ### `GuiPlayer` flow
 
-`placeBet`:
-1. Lock → set `action = Bet`, populate `toCall / pot / hand`, clear `actionReady` → unlock.
-2. `cv.wait` until `actionReady`.
-3. Read `betResult` (-1 = fold) and return it.
+`placeBet(toCall, pot)`:
+1. If `gameOver` is already set, return `-1` (fold) immediately.
+2. Lock → set `action = Bet`, populate `toCall / pot / hand`, clear `actionReady` → unlock.
+3. `cv.wait` until `actionReady || gameOver`.
+4. If `gameOver`, return `-1`; otherwise clear `action`/`actionReady`, return `betResult`.
 
-`chooseDiscards`:
-1. Lock → set `action = Discard`, populate `hand`, reset `discardSel` to all-false → unlock.
-2. `cv.wait` until `actionReady`.
-3. Collect indices where `discardSel[i]` is true and return them.
+`chooseDiscards()`:
+1. If `gameOver`, return `{}` immediately.
+2. Lock → set `action = Discard`, copy `cards_` to `hand`, reset `discardSel` to 5 × `false`, clear `actionReady` → unlock.
+3. `cv.wait` until `actionReady || gameOver`.
+4. If `gameOver`, return `{}`; otherwise collect indices where `discardSel[i]` is true and return them.
+
+### `CardTextures`
+
+Loads one PNG per card from a `cards/` directory using stb_image (forced RGBA). Expected filenames: `{rank}{suit}.png` (e.g. `AS.png`, `10H.png`, `KD.png`) plus `back.png`. All textures use `GL_LINEAR` filtering and `GL_CLAMP_TO_EDGE` wrap. Card pixel dimensions (`w_`, `h_`) default to 71 × 96 and are updated from the first successfully loaded image.
+
+`get(card)` returns the OpenGL texture ID, or `0` if the image failed to load.
+
+### Card button rendering (`cardButton`)
+
+Each card is drawn as a 71 × 96 px button. Two rendering paths:
+
+- **Texture available** (`tex != 0`): `ImGui::ImageButton` with a white tint normally; an orange-red tint (`{1, 0.55, 0.45, 1}`) when selected for discard. A 3 px red border (`IM_COL32(220, 60, 30, 255)`) is drawn via `ImDrawList::AddRect` when selected.
+- **Texture missing** (fallback): `ImGui::Button` with a colored background — red for red suits (`H`/`D`), dark for black suits (`C`/`S`), or a brighter red when selected. The button label shows rank + UTF-8 suit symbol (♥ ♦ ♣ ♠).
+
+### Screen flow
+
+`runGui()` maintains a `Screen` enum (`Setup` / `Game`). Transitioning from Setup to Game launches the game thread exactly once.
 
 ### UI layout (960×680 window)
 
@@ -251,16 +276,30 @@ struct GuiState {
 │                         │                      │
 │      Game Log           │   Action Panel       │
 │  (captured std::cout)   │  (Bet or Discard or  │
-│                         │   Waiting/Game Over) │
+│   auto-scrolls down     │   Waiting/Game Over) │
 │      55% width          │      45% width       │
 └─────────────────────────┴──────────────────────┘
 ```
 
-**Setup screen** (shown before the game starts): sliders/inputs for player count, starting chips, ante, and per-player name + human/CPU toggle.
+Background clear color: near-black `(0.08, 0.08, 0.10)`.
 
-**Bet panel** (when it's the human's turn to bet): shows hand as card buttons, then Fold / Check / Call / Raise controls.
+**Setup screen** — a centered 440 px-wide modal window:
+- `SliderInt` for player count (2–7).
+- `InputInt` for starting chips (min 10) and ante (min 1, max startingChips/2).
+- Per-player `InputText` for name and a `Checkbox` for human/CPU toggle.
+- "Start Game" button (120 × 36 px) transitions to the Game screen.
 
-**Discard panel**: shows 5 card buttons that toggle orange when selected for discard; a "Confirm Discards" button submits.
+**Game screen — right panel** is one of three ImGui windows, chosen by `curAction`:
+
+| `GuiAction` | Window title | Contents |
+|---|---|---|
+| `Bet` | `"Your Turn — Bet"` | Pot and to-call amounts; 5 non-interactive card buttons showing the hand; **Fold** (red), **Check/Call** (green), and **Raise** (blue) buttons; `InputInt` for raise amount |
+| `Discard` | `"Your Turn — Discard"` | 5 toggleable card buttons (orange-red tint + border = selected); discard count label; **Confirm Discards** button (green) |
+| `None` | `"Status"` | "Waiting…" message while computer players act, or green "Game over!" text + log referral when `gameOver` is set |
+
+**Game Log panel** — left 55% of the window, auto-scrolls to the bottom each frame when already near the bottom.
+
+**Window-close handling:** closing the GLFW window sets `gameOver = true`, `betResult = -1`, and `actionReady = true`, then calls `cv.notify_all()` to unblock any waiting `GuiPlayer`. The render loop then joins the game thread before tearing down ImGui and GLFW.
 
 ### New files
 
@@ -269,8 +308,10 @@ struct GuiState {
 | `inc/gui_state.hpp` | `GuiAction` enum + `GuiState` struct |
 | `inc/gui_player.hpp` | `GuiPlayer` class declaration |
 | `inc/gui_app.hpp` | `void runGui()` declaration |
-| `src/gui_player.cpp` | `GuiPlayer` implementation |
-| `src/gui_app.cpp` | `LogBuf`, card rendering helpers, `runGui()` |
+| `inc/card_textures.hpp` | `CardTextures` class declaration |
+| `src/gui_player.cpp` | `GuiPlayer::placeBet` / `chooseDiscards` implementation |
+| `src/gui_app.cpp` | `LogBuf`, `cardButton`, `runGui()` (setup screen + game screen render loop) |
+| `src/card_textures.cpp` | `CardTextures` implementation (stb_image PNG loading, OpenGL upload) |
 
 ---
 
@@ -315,14 +356,15 @@ set(CMAKE_CXX_STANDARD 17)
 
 include(FetchContent)
 FetchContent_Declare(imgui GIT_REPOSITORY https://github.com/ocornut/imgui.git GIT_TAG v1.91.6)
-FetchContent_MakeAvailable(imgui)
+FetchContent_Declare(stb   GIT_REPOSITORY https://github.com/nothings/stb.git)
+FetchContent_MakeAvailable(imgui stb)
 
 add_library(imgui STATIC <imgui sources + GLFW/OpenGL3 backends>)
 target_link_libraries(imgui PUBLIC OpenGL::GL glfw)
 
 file(GLOB SRC src/*.cpp)
 add_executable(poker ${SRC})
-target_include_directories(poker PRIVATE inc)
+target_include_directories(poker PRIVATE inc ${stb_SOURCE_DIR})
 target_link_libraries(poker PRIVATE imgui)
 ```
 
@@ -351,7 +393,8 @@ module12/
 │   ├── game.hpp
 │   ├── gui_state.hpp      (extra credit GUI)
 │   ├── gui_player.hpp     (extra credit GUI)
-│   └── gui_app.hpp        (extra credit GUI)
+│   ├── gui_app.hpp        (extra credit GUI)
+│   └── card_textures.hpp  (extra credit GUI)
 └── src/
     ├── pokerhand.cpp      (from module4)
     ├── deck.cpp
@@ -361,5 +404,6 @@ module12/
     ├── game.cpp
     ├── main.cpp
     ├── gui_player.cpp     (extra credit GUI)
-    └── gui_app.cpp        (extra credit GUI)
+    ├── gui_app.cpp        (extra credit GUI)
+    └── card_textures.cpp  (extra credit GUI)
 ```

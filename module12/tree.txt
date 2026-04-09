@@ -1,0 +1,1026 @@
+.
+├── assignment.md
+├── build
+│   ├── cards
+│   │   ├── 10C.png
+│   │   ├── 10D.png
+│   │   ├── 10H.png
+│   │   ├── 10S.png
+│   │   ├── 2C.png
+│   │   ├── 2D.png
+│   │   ├── 2H.png
+│   │   ├── 2S.png
+│   │   ├── 3C.png
+│   │   ├── 3D.png
+│   │   ├── 3H.png
+│   │   ├── 3S.png
+│   │   ├── 4C.png
+│   │   ├── 4D.png
+│   │   ├── 4H.png
+│   │   ├── 4S.png
+│   │   ├── 5C.png
+│   │   ├── 5D.png
+│   │   ├── 5H.png
+│   │   ├── 5S.png
+│   │   ├── 6C.png
+│   │   ├── 6D.png
+│   │   ├── 6H.png
+│   │   ├── 6S.png
+│   │   ├── 7C.png
+│   │   ├── 7D.png
+│   │   ├── 7H.png
+│   │   ├── 7S.png
+│   │   ├── 8C.png
+│   │   ├── 8D.png
+│   │   ├── 8H.png
+│   │   ├── 8S.png
+│   │   ├── 9C.png
+│   │   ├── 9D.png
+│   │   ├── 9H.png
+│   │   ├── 9S.png
+│   │   ├── AC.png
+│   │   ├── AD.png
+│   │   ├── AH.png
+│   │   ├── AS.png
+│   │   ├── JC.png
+│   │   ├── JD.png
+│   │   ├── JH.png
+│   │   ├── JS.png
+│   │   ├── KC.png
+│   │   ├── KD.png
+│   │   ├── KH.png
+│   │   ├── KS.png
+│   │   ├── QC.png
+│   │   ├── QD.png
+│   │   ├── QH.png
+│   │   └── QS.png
+│   ├── CMakeCache.txt
+│   ├── CMakeFiles
+│   │   ├── 3.26.5
+│   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   ├── CMakeSystem.cmake
+│   │   │   └── CompilerIdCXX
+│   │   │       ├── a.out
+│   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │       └── tmp
+│   │   ├── cmake.check_cache
+│   │   ├── CMakeConfigureLog.yaml
+│   │   ├── CMakeDirectoryInformation.cmake
+│   │   ├── imgui.dir
+│   │   │   ├── build.make
+│   │   │   ├── cmake_clean.cmake
+│   │   │   ├── cmake_clean_target.cmake
+│   │   │   ├── compiler_depend.internal
+│   │   │   ├── compiler_depend.make
+│   │   │   ├── compiler_depend.ts
+│   │   │   ├── DependInfo.cmake
+│   │   │   ├── depend.make
+│   │   │   ├── _deps
+│   │   │   │   └── imgui-src
+│   │   │   │       ├── backends
+│   │   │   │       │   ├── imgui_impl_glfw.cpp.o
+│   │   │   │       │   ├── imgui_impl_glfw.cpp.o.d
+│   │   │   │       │   ├── imgui_impl_opengl3.cpp.o
+│   │   │   │       │   └── imgui_impl_opengl3.cpp.o.d
+│   │   │   │       ├── imgui.cpp.o
+│   │   │   │       ├── imgui.cpp.o.d
+│   │   │   │       ├── imgui_draw.cpp.o
+│   │   │   │       ├── imgui_draw.cpp.o.d
+│   │   │   │       ├── imgui_tables.cpp.o
+│   │   │   │       ├── imgui_tables.cpp.o.d
+│   │   │   │       ├── imgui_widgets.cpp.o
+│   │   │   │       └── imgui_widgets.cpp.o.d
+│   │   │   ├── flags.make
+│   │   │   ├── link.txt
+│   │   │   └── progress.make
+│   │   ├── Makefile2
+│   │   ├── Makefile.cmake
+│   │   ├── pkgRedirects
+│   │   ├── poker.dir
+│   │   │   ├── build.make
+│   │   │   ├── cmake_clean.cmake
+│   │   │   ├── compiler_depend.internal
+│   │   │   ├── compiler_depend.make
+│   │   │   ├── compiler_depend.ts
+│   │   │   ├── DependInfo.cmake
+│   │   │   ├── depend.make
+│   │   │   ├── flags.make
+│   │   │   ├── link.txt
+│   │   │   ├── progress.make
+│   │   │   └── src
+│   │   │       ├── card_textures.cpp.o
+│   │   │       ├── card_textures.cpp.o.d
+│   │   │       ├── computer_player.cpp.o
+│   │   │       ├── computer_player.cpp.o.d
+│   │   │       ├── deck.cpp.o
+│   │   │       ├── deck.cpp.o.d
+│   │   │       ├── game.cpp.o
+│   │   │       ├── game.cpp.o.d
+│   │   │       ├── gui_app.cpp.o
+│   │   │       ├── gui_app.cpp.o.d
+│   │   │       ├── gui_player.cpp.o
+│   │   │       ├── gui_player.cpp.o.d
+│   │   │       ├── human_player.cpp.o
+│   │   │       ├── human_player.cpp.o.d
+│   │   │       ├── main.cpp.o
+│   │   │       ├── main.cpp.o.d
+│   │   │       ├── player.cpp.o
+│   │   │       ├── player.cpp.o.d
+│   │   │       ├── pokerhand.cpp.o
+│   │   │       └── pokerhand.cpp.o.d
+│   │   ├── progress.marks
+│   │   └── TargetDirectories.txt
+│   ├── cmake_install.cmake
+│   ├── _deps
+│   │   ├── imgui-build
+│   │   ├── imgui-src
+│   │   │   ├── backends
+│   │   │   │   ├── imgui_impl_allegro5.cpp
+│   │   │   │   ├── imgui_impl_allegro5.h
+│   │   │   │   ├── imgui_impl_android.cpp
+│   │   │   │   ├── imgui_impl_android.h
+│   │   │   │   ├── imgui_impl_dx10.cpp
+│   │   │   │   ├── imgui_impl_dx10.h
+│   │   │   │   ├── imgui_impl_dx11.cpp
+│   │   │   │   ├── imgui_impl_dx11.h
+│   │   │   │   ├── imgui_impl_dx12.cpp
+│   │   │   │   ├── imgui_impl_dx12.h
+│   │   │   │   ├── imgui_impl_dx9.cpp
+│   │   │   │   ├── imgui_impl_dx9.h
+│   │   │   │   ├── imgui_impl_glfw.cpp
+│   │   │   │   ├── imgui_impl_glfw.h
+│   │   │   │   ├── imgui_impl_glut.cpp
+│   │   │   │   ├── imgui_impl_glut.h
+│   │   │   │   ├── imgui_impl_metal.h
+│   │   │   │   ├── imgui_impl_metal.mm
+│   │   │   │   ├── imgui_impl_opengl2.cpp
+│   │   │   │   ├── imgui_impl_opengl2.h
+│   │   │   │   ├── imgui_impl_opengl3.cpp
+│   │   │   │   ├── imgui_impl_opengl3.h
+│   │   │   │   ├── imgui_impl_opengl3_loader.h
+│   │   │   │   ├── imgui_impl_osx.h
+│   │   │   │   ├── imgui_impl_osx.mm
+│   │   │   │   ├── imgui_impl_sdl2.cpp
+│   │   │   │   ├── imgui_impl_sdl2.h
+│   │   │   │   ├── imgui_impl_sdl3.cpp
+│   │   │   │   ├── imgui_impl_sdl3.h
+│   │   │   │   ├── imgui_impl_sdlrenderer2.cpp
+│   │   │   │   ├── imgui_impl_sdlrenderer2.h
+│   │   │   │   ├── imgui_impl_sdlrenderer3.cpp
+│   │   │   │   ├── imgui_impl_sdlrenderer3.h
+│   │   │   │   ├── imgui_impl_vulkan.cpp
+│   │   │   │   ├── imgui_impl_vulkan.h
+│   │   │   │   ├── imgui_impl_wgpu.cpp
+│   │   │   │   ├── imgui_impl_wgpu.h
+│   │   │   │   ├── imgui_impl_win32.cpp
+│   │   │   │   ├── imgui_impl_win32.h
+│   │   │   │   └── vulkan
+│   │   │   │       ├── generate_spv.sh
+│   │   │   │       ├── glsl_shader.frag
+│   │   │   │       └── glsl_shader.vert
+│   │   │   ├── docs
+│   │   │   │   ├── BACKENDS.md
+│   │   │   │   ├── CHANGELOG.txt
+│   │   │   │   ├── CONTRIBUTING.md
+│   │   │   │   ├── EXAMPLES.md
+│   │   │   │   ├── FAQ.md
+│   │   │   │   ├── FONTS.md
+│   │   │   │   ├── README.md
+│   │   │   │   └── TODO.txt
+│   │   │   ├── examples
+│   │   │   │   ├── example_allegro5
+│   │   │   │   │   ├── example_allegro5.vcxproj
+│   │   │   │   │   ├── example_allegro5.vcxproj.filters
+│   │   │   │   │   ├── imconfig_allegro5.h
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── example_android_opengl3
+│   │   │   │   │   ├── android
+│   │   │   │   │   │   ├── app
+│   │   │   │   │   │   │   ├── build.gradle
+│   │   │   │   │   │   │   └── src
+│   │   │   │   │   │   │       └── main
+│   │   │   │   │   │   │           ├── AndroidManifest.xml
+│   │   │   │   │   │   │           └── java
+│   │   │   │   │   │   │               └── MainActivity.kt
+│   │   │   │   │   │   ├── build.gradle
+│   │   │   │   │   │   └── settings.gradle
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   └── main.cpp
+│   │   │   │   ├── example_apple_metal
+│   │   │   │   │   ├── example_apple_metal.xcodeproj
+│   │   │   │   │   │   └── project.pbxproj
+│   │   │   │   │   ├── iOS
+│   │   │   │   │   │   ├── Info-iOS.plist
+│   │   │   │   │   │   └── LaunchScreen.storyboard
+│   │   │   │   │   ├── macOS
+│   │   │   │   │   │   ├── Info-macOS.plist
+│   │   │   │   │   │   └── MainMenu.storyboard
+│   │   │   │   │   ├── main.mm
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── example_apple_opengl2
+│   │   │   │   │   ├── example_apple_opengl2.xcodeproj
+│   │   │   │   │   │   └── project.pbxproj
+│   │   │   │   │   └── main.mm
+│   │   │   │   ├── example_glfw_metal
+│   │   │   │   │   ├── main.mm
+│   │   │   │   │   └── Makefile
+│   │   │   │   ├── example_glfw_opengl2
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_glfw_opengl2.vcxproj
+│   │   │   │   │   ├── example_glfw_opengl2.vcxproj.filters
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   └── Makefile
+│   │   │   │   ├── example_glfw_opengl3
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_glfw_opengl3.vcxproj
+│   │   │   │   │   ├── example_glfw_opengl3.vcxproj.filters
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   └── Makefile.emscripten
+│   │   │   │   ├── example_glfw_vulkan
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── build_win64.bat
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── example_glfw_vulkan.vcxproj
+│   │   │   │   │   ├── example_glfw_vulkan.vcxproj.filters
+│   │   │   │   │   └── main.cpp
+│   │   │   │   ├── example_glfw_wgpu
+│   │   │   │   │   ├── CMakeLists.txt
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   ├── Makefile.emscripten
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── web
+│   │   │   │   │       └── index.html
+│   │   │   │   ├── example_glut_opengl2
+│   │   │   │   │   ├── example_glut_opengl2.vcxproj
+│   │   │   │   │   ├── example_glut_opengl2.vcxproj.filters
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   └── Makefile
+│   │   │   │   ├── example_null
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   └── Makefile
+│   │   │   │   ├── example_sdl2_directx11
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_sdl2_directx11.vcxproj
+│   │   │   │   │   ├── example_sdl2_directx11.vcxproj.filters
+│   │   │   │   │   └── main.cpp
+│   │   │   │   ├── example_sdl2_metal
+│   │   │   │   │   ├── main.mm
+│   │   │   │   │   └── Makefile
+│   │   │   │   ├── example_sdl2_opengl2
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_sdl2_opengl2.vcxproj
+│   │   │   │   │   ├── example_sdl2_opengl2.vcxproj.filters
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── example_sdl2_opengl3
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_sdl2_opengl3.vcxproj
+│   │   │   │   │   ├── example_sdl2_opengl3.vcxproj.filters
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.emscripten
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── example_sdl2_sdlrenderer2
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_sdl2_sdlrenderer2.vcxproj
+│   │   │   │   │   ├── example_sdl2_sdlrenderer2.vcxproj.filters
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── example_sdl2_vulkan
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── build_win64.bat
+│   │   │   │   │   ├── example_sdl2_vulkan.vcxproj
+│   │   │   │   │   ├── example_sdl2_vulkan.vcxproj.filters
+│   │   │   │   │   └── main.cpp
+│   │   │   │   ├── example_sdl3_opengl3
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── build_win64.bat
+│   │   │   │   │   ├── example_sdl3_opengl3.vcxproj
+│   │   │   │   │   ├── example_sdl3_opengl3.vcxproj.filters
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.emscripten
+│   │   │   │   │   └── README.md
+│   │   │   │   ├── example_sdl3_sdlrenderer3
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_sdl3_sdlrenderer3.vcxproj
+│   │   │   │   │   ├── example_sdl3_sdlrenderer3.vcxproj.filters
+│   │   │   │   │   ├── main.cpp
+│   │   │   │   │   └── Makefile
+│   │   │   │   ├── example_sdl3_vulkan
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── build_win64.bat
+│   │   │   │   │   ├── example_sdl3_vulkan.vcxproj
+│   │   │   │   │   ├── example_sdl3_vulkan.vcxproj.filters
+│   │   │   │   │   └── main.cpp
+│   │   │   │   ├── example_win32_directx10
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_win32_directx10.vcxproj
+│   │   │   │   │   ├── example_win32_directx10.vcxproj.filters
+│   │   │   │   │   └── main.cpp
+│   │   │   │   ├── example_win32_directx11
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_win32_directx11.vcxproj
+│   │   │   │   │   ├── example_win32_directx11.vcxproj.filters
+│   │   │   │   │   └── main.cpp
+│   │   │   │   ├── example_win32_directx12
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_win32_directx12.vcxproj
+│   │   │   │   │   ├── example_win32_directx12.vcxproj.filters
+│   │   │   │   │   └── main.cpp
+│   │   │   │   ├── example_win32_directx9
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_win32_directx9.vcxproj
+│   │   │   │   │   ├── example_win32_directx9.vcxproj.filters
+│   │   │   │   │   └── main.cpp
+│   │   │   │   ├── example_win32_opengl3
+│   │   │   │   │   ├── build_mingw.bat
+│   │   │   │   │   ├── build_win32.bat
+│   │   │   │   │   ├── example_win32_opengl3.vcxproj
+│   │   │   │   │   ├── example_win32_opengl3.vcxproj.filters
+│   │   │   │   │   └── main.cpp
+│   │   │   │   ├── imgui_examples.sln
+│   │   │   │   ├── libs
+│   │   │   │   │   ├── emscripten
+│   │   │   │   │   │   ├── emscripten_mainloop_stub.h
+│   │   │   │   │   │   └── shell_minimal.html
+│   │   │   │   │   ├── glfw
+│   │   │   │   │   │   ├── COPYING.txt
+│   │   │   │   │   │   ├── include
+│   │   │   │   │   │   │   └── GLFW
+│   │   │   │   │   │   │       ├── glfw3.h
+│   │   │   │   │   │   │       └── glfw3native.h
+│   │   │   │   │   │   ├── lib-vc2010-32
+│   │   │   │   │   │   │   └── glfw3.lib
+│   │   │   │   │   │   └── lib-vc2010-64
+│   │   │   │   │   │       └── glfw3.lib
+│   │   │   │   │   └── usynergy
+│   │   │   │   │       ├── README.txt
+│   │   │   │   │       ├── uSynergy.c
+│   │   │   │   │       └── uSynergy.h
+│   │   │   │   └── README.txt
+│   │   │   ├── imconfig.h
+│   │   │   ├── imgui.cpp
+│   │   │   ├── imgui_demo.cpp
+│   │   │   ├── imgui_draw.cpp
+│   │   │   ├── imgui.h
+│   │   │   ├── imgui_internal.h
+│   │   │   ├── imgui_tables.cpp
+│   │   │   ├── imgui_widgets.cpp
+│   │   │   ├── imstb_rectpack.h
+│   │   │   ├── imstb_textedit.h
+│   │   │   ├── imstb_truetype.h
+│   │   │   ├── LICENSE.txt
+│   │   │   └── misc
+│   │   │       ├── cpp
+│   │   │       │   ├── imgui_stdlib.cpp
+│   │   │       │   ├── imgui_stdlib.h
+│   │   │       │   └── README.txt
+│   │   │       ├── debuggers
+│   │   │       │   ├── imgui.gdb
+│   │   │       │   ├── imgui.natstepfilter
+│   │   │       │   ├── imgui.natvis
+│   │   │       │   └── README.txt
+│   │   │       ├── fonts
+│   │   │       │   ├── binary_to_compressed_c.cpp
+│   │   │       │   ├── Cousine-Regular.ttf
+│   │   │       │   ├── DroidSans.ttf
+│   │   │       │   ├── Karla-Regular.ttf
+│   │   │       │   ├── ProggyClean.ttf
+│   │   │       │   ├── ProggyTiny.ttf
+│   │   │       │   └── Roboto-Medium.ttf
+│   │   │       ├── freetype
+│   │   │       │   ├── imgui_freetype.cpp
+│   │   │       │   ├── imgui_freetype.h
+│   │   │       │   └── README.md
+│   │   │       ├── README.txt
+│   │   │       └── single_file
+│   │   │           └── imgui_single_file.h
+│   │   ├── imgui-subbuild
+│   │   │   ├── CMakeCache.txt
+│   │   │   ├── CMakeFiles
+│   │   │   │   ├── 3.26.5
+│   │   │   │   │   └── CMakeSystem.cmake
+│   │   │   │   ├── cmake.check_cache
+│   │   │   │   ├── CMakeConfigureLog.yaml
+│   │   │   │   ├── CMakeDirectoryInformation.cmake
+│   │   │   │   ├── CMakeRuleHashes.txt
+│   │   │   │   ├── imgui-populate-complete
+│   │   │   │   ├── imgui-populate.dir
+│   │   │   │   │   ├── build.make
+│   │   │   │   │   ├── cmake_clean.cmake
+│   │   │   │   │   ├── compiler_depend.make
+│   │   │   │   │   ├── compiler_depend.ts
+│   │   │   │   │   ├── DependInfo.cmake
+│   │   │   │   │   ├── Labels.json
+│   │   │   │   │   ├── Labels.txt
+│   │   │   │   │   └── progress.make
+│   │   │   │   ├── Makefile2
+│   │   │   │   ├── Makefile.cmake
+│   │   │   │   ├── pkgRedirects
+│   │   │   │   ├── progress.marks
+│   │   │   │   └── TargetDirectories.txt
+│   │   │   ├── cmake_install.cmake
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── imgui-populate-prefix
+│   │   │   │   ├── src
+│   │   │   │   │   └── imgui-populate-stamp
+│   │   │   │   │       ├── imgui-populate-build
+│   │   │   │   │       ├── imgui-populate-configure
+│   │   │   │   │       ├── imgui-populate-done
+│   │   │   │   │       ├── imgui-populate-download
+│   │   │   │   │       ├── imgui-populate-gitclone-lastrun.txt
+│   │   │   │   │       ├── imgui-populate-gitinfo.txt
+│   │   │   │   │       ├── imgui-populate-install
+│   │   │   │   │       ├── imgui-populate-mkdir
+│   │   │   │   │       ├── imgui-populate-patch
+│   │   │   │   │       └── imgui-populate-test
+│   │   │   │   └── tmp
+│   │   │   │       ├── imgui-populate-cfgcmd.txt
+│   │   │   │       ├── imgui-populate-gitclone.cmake
+│   │   │   │       ├── imgui-populate-gitupdate.cmake
+│   │   │   │       └── imgui-populate-mkdirs.cmake
+│   │   │   └── Makefile
+│   │   ├── stb-build
+│   │   ├── stb-src
+│   │   │   ├── CONTRIBUTING.md
+│   │   │   ├── data
+│   │   │   │   ├── atari_8bit_font_revised.png
+│   │   │   │   ├── easy_font_raw.png
+│   │   │   │   ├── herringbone
+│   │   │   │   │   ├── license.txt
+│   │   │   │   │   ├── template_caves_limit_connectivity.png
+│   │   │   │   │   ├── template_caves_tiny_corridors.png
+│   │   │   │   │   ├── template_corner_caves.png
+│   │   │   │   │   ├── template_horizontal_corridors_v1.png
+│   │   │   │   │   ├── template_horizontal_corridors_v2.png
+│   │   │   │   │   ├── template_horizontal_corridors_v3.png
+│   │   │   │   │   ├── template_limit_connectivity_fat.png
+│   │   │   │   │   ├── template_limited_connectivity.png
+│   │   │   │   │   ├── template_maze_2_wide.png
+│   │   │   │   │   ├── template_maze_plus_2_wide.png
+│   │   │   │   │   ├── template_open_areas.png
+│   │   │   │   │   ├── template_ref2_corner_caves.png
+│   │   │   │   │   ├── template_rooms_and_corridors_2_wide_diagonal_bias.png
+│   │   │   │   │   ├── template_rooms_and_corridors.png
+│   │   │   │   │   ├── template_rooms_limit_connectivity.png
+│   │   │   │   │   ├── template_round_rooms_diagonal_corridors.png
+│   │   │   │   │   ├── template_sean_dungeon.png
+│   │   │   │   │   ├── template_simple_caves_2_wide.png
+│   │   │   │   │   └── template_square_rooms_with_random_rects.png
+│   │   │   │   ├── map_01.png
+│   │   │   │   ├── map_02.png
+│   │   │   │   └── map_03.png
+│   │   │   ├── deprecated
+│   │   │   │   ├── rrsprintf.h
+│   │   │   │   ├── stb.h
+│   │   │   │   ├── stb_image.c
+│   │   │   │   ├── stb_image_resize.h
+│   │   │   │   ├── stretch_test.c
+│   │   │   │   ├── stretchy_buffer.h
+│   │   │   │   └── stretchy_buffer.txt
+│   │   │   ├── docs
+│   │   │   │   ├── other_libs.md
+│   │   │   │   ├── stb_howto.txt
+│   │   │   │   ├── stb_voxel_render_interview.md
+│   │   │   │   └── why_public_domain.md
+│   │   │   ├── LICENSE
+│   │   │   ├── README.md
+│   │   │   ├── SECURITY.md
+│   │   │   ├── stb_c_lexer.h
+│   │   │   ├── stb_connected_components.h
+│   │   │   ├── stb_divide.h
+│   │   │   ├── stb_ds.h
+│   │   │   ├── stb_dxt.h
+│   │   │   ├── stb_easy_font.h
+│   │   │   ├── stb_herringbone_wang_tile.h
+│   │   │   ├── stb_hexwave.h
+│   │   │   ├── stb_image.h
+│   │   │   ├── stb_image_resize2.h
+│   │   │   ├── stb_image_resize_test
+│   │   │   │   ├── dotimings.c
+│   │   │   │   ├── old_image_resize.h
+│   │   │   │   ├── oldir.c
+│   │   │   │   ├── stbirtest.c
+│   │   │   │   └── vf_train.c
+│   │   │   ├── stb_image_write.h
+│   │   │   ├── stb_include.h
+│   │   │   ├── stb_leakcheck.h
+│   │   │   ├── stb_perlin.h
+│   │   │   ├── stb_rect_pack.h
+│   │   │   ├── stb_sprintf.h
+│   │   │   ├── stb_textedit.h
+│   │   │   ├── stb_tilemap_editor.h
+│   │   │   ├── stb_truetype.h
+│   │   │   ├── stb_vorbis.c
+│   │   │   ├── stb_voxel_render.h
+│   │   │   ├── tests
+│   │   │   │   ├── caveview
+│   │   │   │   │   ├── cave_main.c
+│   │   │   │   │   ├── cave_mesher.c
+│   │   │   │   │   ├── cave_parse.c
+│   │   │   │   │   ├── cave_parse.h
+│   │   │   │   │   ├── cave_render.c
+│   │   │   │   │   ├── caveview.dsp
+│   │   │   │   │   ├── caveview.dsw
+│   │   │   │   │   ├── caveview.h
+│   │   │   │   │   ├── glext.h
+│   │   │   │   │   ├── glext_list.h
+│   │   │   │   │   ├── main.c
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   ├── stb_gl.h
+│   │   │   │   │   ├── stb_glprog.h
+│   │   │   │   │   └── win32
+│   │   │   │   │       └── SDL_windows_main.c
+│   │   │   │   ├── c_lexer_test.c
+│   │   │   │   ├── c_lexer_test.dsp
+│   │   │   │   ├── fuzz_main.c
+│   │   │   │   ├── grid_reachability.c
+│   │   │   │   ├── herringbone.dsp
+│   │   │   │   ├── herringbone_generator.c
+│   │   │   │   ├── herringbone_map.c
+│   │   │   │   ├── herringbone_map.dsp
+│   │   │   │   ├── image_test.c
+│   │   │   │   ├── image_test.dsp
+│   │   │   │   ├── image_write_test.c
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── ossfuzz.sh
+│   │   │   │   ├── oversample
+│   │   │   │   │   ├── main.c
+│   │   │   │   │   ├── oversample.dsp
+│   │   │   │   │   ├── oversample.dsw
+│   │   │   │   │   ├── oversample.exe
+│   │   │   │   │   ├── README.md
+│   │   │   │   │   └── stb_wingraph.h
+│   │   │   │   ├── pbm
+│   │   │   │   │   ├── basi0g16.pgm
+│   │   │   │   │   ├── basi2c16.ppm
+│   │   │   │   │   ├── cdfn2c08.ppm
+│   │   │   │   │   ├── cdun2c08.ppm
+│   │   │   │   │   ├── comment.pgm
+│   │   │   │   │   └── ctfn0g04.pgm
+│   │   │   │   ├── pg_test
+│   │   │   │   │   └── pg_test.c
+│   │   │   │   ├── pngsuite
+│   │   │   │   │   ├── 16bit
+│   │   │   │   │   │   ├── basi0g16.png
+│   │   │   │   │   │   ├── basi2c16.png
+│   │   │   │   │   │   ├── basi4a16.png
+│   │   │   │   │   │   ├── basi6a16.png
+│   │   │   │   │   │   ├── basn0g16.png
+│   │   │   │   │   │   ├── basn2c16.png
+│   │   │   │   │   │   ├── basn4a16.png
+│   │   │   │   │   │   ├── basn6a16.png
+│   │   │   │   │   │   ├── bgai4a16.png
+│   │   │   │   │   │   ├── bgan6a16.png
+│   │   │   │   │   │   ├── bggn4a16.png
+│   │   │   │   │   │   ├── bgyn6a16.png
+│   │   │   │   │   │   ├── oi1n0g16.png
+│   │   │   │   │   │   ├── oi1n2c16.png
+│   │   │   │   │   │   ├── oi2n0g16.png
+│   │   │   │   │   │   ├── oi2n2c16.png
+│   │   │   │   │   │   ├── oi4n0g16.png
+│   │   │   │   │   │   ├── oi4n2c16.png
+│   │   │   │   │   │   ├── oi9n0g16.png
+│   │   │   │   │   │   ├── oi9n2c16.png
+│   │   │   │   │   │   ├── tbbn2c16.png
+│   │   │   │   │   │   ├── tbgn2c16.png
+│   │   │   │   │   │   └── tbwn0g16.png
+│   │   │   │   │   ├── corrupt
+│   │   │   │   │   │   ├── xc1n0g08.png
+│   │   │   │   │   │   ├── xc9n2c08.png
+│   │   │   │   │   │   ├── xcrn0g04.png
+│   │   │   │   │   │   ├── xcsn0g01.png
+│   │   │   │   │   │   ├── xd0n2c08.png
+│   │   │   │   │   │   ├── xd3n2c08.png
+│   │   │   │   │   │   ├── xd9n2c08.png
+│   │   │   │   │   │   ├── xdtn0g01.png
+│   │   │   │   │   │   ├── xhdn0g08.png
+│   │   │   │   │   │   ├── xlfn0g04.png
+│   │   │   │   │   │   ├── xs1n0g01.png
+│   │   │   │   │   │   ├── xs2n0g01.png
+│   │   │   │   │   │   ├── xs4n0g01.png
+│   │   │   │   │   │   └── xs7n0g01.png
+│   │   │   │   │   ├── iphone
+│   │   │   │   │   │   ├── iphone_basi0g01.png
+│   │   │   │   │   │   ├── iphone_basi0g02.png
+│   │   │   │   │   │   ├── iphone_basi3p02.png
+│   │   │   │   │   │   ├── iphone_bgwn6a08.png
+│   │   │   │   │   │   ├── iphone_bgyn6a16.png
+│   │   │   │   │   │   ├── iphone_tbyn3p08.png
+│   │   │   │   │   │   └── iphone_z06n2c08.png
+│   │   │   │   │   ├── PngSuite.LICENSE
+│   │   │   │   │   ├── primary
+│   │   │   │   │   │   ├── basi0g01.png
+│   │   │   │   │   │   ├── basi0g02.png
+│   │   │   │   │   │   ├── basi0g04.png
+│   │   │   │   │   │   ├── basi0g08.png
+│   │   │   │   │   │   ├── basi2c08.png
+│   │   │   │   │   │   ├── basi3p01.png
+│   │   │   │   │   │   ├── basi3p02.png
+│   │   │   │   │   │   ├── basi3p04.png
+│   │   │   │   │   │   ├── basi3p08.png
+│   │   │   │   │   │   ├── basi4a08.png
+│   │   │   │   │   │   ├── basi6a08.png
+│   │   │   │   │   │   ├── basn0g01.png
+│   │   │   │   │   │   ├── basn0g02.png
+│   │   │   │   │   │   ├── basn0g04.png
+│   │   │   │   │   │   ├── basn0g08.png
+│   │   │   │   │   │   ├── basn2c08.png
+│   │   │   │   │   │   ├── basn3p01.png
+│   │   │   │   │   │   ├── basn3p02.png
+│   │   │   │   │   │   ├── basn3p04.png
+│   │   │   │   │   │   ├── basn3p08.png
+│   │   │   │   │   │   ├── basn4a08.png
+│   │   │   │   │   │   ├── basn6a08.png
+│   │   │   │   │   │   ├── bgai4a08.png
+│   │   │   │   │   │   ├── bgan6a08.png
+│   │   │   │   │   │   ├── bgbn4a08.png
+│   │   │   │   │   │   ├── bgwn6a08.png
+│   │   │   │   │   │   ├── s01i3p01.png
+│   │   │   │   │   │   ├── s01n3p01.png
+│   │   │   │   │   │   ├── s02i3p01.png
+│   │   │   │   │   │   ├── s02n3p01.png
+│   │   │   │   │   │   ├── s03i3p01.png
+│   │   │   │   │   │   ├── s03n3p01.png
+│   │   │   │   │   │   ├── s04i3p01.png
+│   │   │   │   │   │   ├── s04n3p01.png
+│   │   │   │   │   │   ├── s05i3p02.png
+│   │   │   │   │   │   ├── s05n3p02.png
+│   │   │   │   │   │   ├── s06i3p02.png
+│   │   │   │   │   │   ├── s06n3p02.png
+│   │   │   │   │   │   ├── s07i3p02.png
+│   │   │   │   │   │   ├── s07n3p02.png
+│   │   │   │   │   │   ├── s08i3p02.png
+│   │   │   │   │   │   ├── s08n3p02.png
+│   │   │   │   │   │   ├── s09i3p02.png
+│   │   │   │   │   │   ├── s09n3p02.png
+│   │   │   │   │   │   ├── s32i3p04.png
+│   │   │   │   │   │   ├── s32n3p04.png
+│   │   │   │   │   │   ├── s33i3p04.png
+│   │   │   │   │   │   ├── s33n3p04.png
+│   │   │   │   │   │   ├── s34i3p04.png
+│   │   │   │   │   │   ├── s34n3p04.png
+│   │   │   │   │   │   ├── s35i3p04.png
+│   │   │   │   │   │   ├── s35n3p04.png
+│   │   │   │   │   │   ├── s36i3p04.png
+│   │   │   │   │   │   ├── s36n3p04.png
+│   │   │   │   │   │   ├── s37i3p04.png
+│   │   │   │   │   │   ├── s37n3p04.png
+│   │   │   │   │   │   ├── s38i3p04.png
+│   │   │   │   │   │   ├── s38n3p04.png
+│   │   │   │   │   │   ├── s39i3p04.png
+│   │   │   │   │   │   ├── s39n3p04.png
+│   │   │   │   │   │   ├── s40i3p04.png
+│   │   │   │   │   │   ├── s40n3p04.png
+│   │   │   │   │   │   ├── tbbn0g04.png
+│   │   │   │   │   │   ├── tbbn3p08.png
+│   │   │   │   │   │   ├── tbgn3p08.png
+│   │   │   │   │   │   ├── tbrn2c08.png
+│   │   │   │   │   │   ├── tbwn3p08.png
+│   │   │   │   │   │   ├── tbyn3p08.png
+│   │   │   │   │   │   ├── tm3n3p02.png
+│   │   │   │   │   │   ├── tp0n0g08.png
+│   │   │   │   │   │   ├── tp0n2c08.png
+│   │   │   │   │   │   ├── tp0n3p08.png
+│   │   │   │   │   │   ├── tp1n3p08.png
+│   │   │   │   │   │   ├── z00n2c08.png
+│   │   │   │   │   │   ├── z03n2c08.png
+│   │   │   │   │   │   ├── z06n2c08.png
+│   │   │   │   │   │   └── z09n2c08.png
+│   │   │   │   │   ├── primary_check
+│   │   │   │   │   │   ├── basi0g01.png
+│   │   │   │   │   │   ├── basi0g02.png
+│   │   │   │   │   │   ├── basi0g04.png
+│   │   │   │   │   │   ├── basi0g08.png
+│   │   │   │   │   │   ├── basi2c08.png
+│   │   │   │   │   │   ├── basi3p01.png
+│   │   │   │   │   │   ├── basi3p02.png
+│   │   │   │   │   │   ├── basi3p04.png
+│   │   │   │   │   │   ├── basi3p08.png
+│   │   │   │   │   │   ├── basi4a08.png
+│   │   │   │   │   │   ├── basi6a08.png
+│   │   │   │   │   │   ├── basn0g01.png
+│   │   │   │   │   │   ├── basn0g02.png
+│   │   │   │   │   │   ├── basn0g04.png
+│   │   │   │   │   │   ├── basn0g08.png
+│   │   │   │   │   │   ├── basn2c08.png
+│   │   │   │   │   │   ├── basn3p01.png
+│   │   │   │   │   │   ├── basn3p02.png
+│   │   │   │   │   │   ├── basn3p04.png
+│   │   │   │   │   │   ├── basn3p08.png
+│   │   │   │   │   │   ├── basn4a08.png
+│   │   │   │   │   │   ├── basn6a08.png
+│   │   │   │   │   │   ├── bgai4a08.png
+│   │   │   │   │   │   ├── bgan6a08.png
+│   │   │   │   │   │   ├── bgbn4a08.png
+│   │   │   │   │   │   ├── bgwn6a08.png
+│   │   │   │   │   │   ├── s01i3p01.png
+│   │   │   │   │   │   ├── s01n3p01.png
+│   │   │   │   │   │   ├── s02i3p01.png
+│   │   │   │   │   │   ├── s02n3p01.png
+│   │   │   │   │   │   ├── s03i3p01.png
+│   │   │   │   │   │   ├── s03n3p01.png
+│   │   │   │   │   │   ├── s04i3p01.png
+│   │   │   │   │   │   ├── s04n3p01.png
+│   │   │   │   │   │   ├── s05i3p02.png
+│   │   │   │   │   │   ├── s05n3p02.png
+│   │   │   │   │   │   ├── s06i3p02.png
+│   │   │   │   │   │   ├── s06n3p02.png
+│   │   │   │   │   │   ├── s07i3p02.png
+│   │   │   │   │   │   ├── s07n3p02.png
+│   │   │   │   │   │   ├── s08i3p02.png
+│   │   │   │   │   │   ├── s08n3p02.png
+│   │   │   │   │   │   ├── s09i3p02.png
+│   │   │   │   │   │   ├── s09n3p02.png
+│   │   │   │   │   │   ├── s32i3p04.png
+│   │   │   │   │   │   ├── s32n3p04.png
+│   │   │   │   │   │   ├── s33i3p04.png
+│   │   │   │   │   │   ├── s33n3p04.png
+│   │   │   │   │   │   ├── s34i3p04.png
+│   │   │   │   │   │   ├── s34n3p04.png
+│   │   │   │   │   │   ├── s35i3p04.png
+│   │   │   │   │   │   ├── s35n3p04.png
+│   │   │   │   │   │   ├── s36i3p04.png
+│   │   │   │   │   │   ├── s36n3p04.png
+│   │   │   │   │   │   ├── s37i3p04.png
+│   │   │   │   │   │   ├── s37n3p04.png
+│   │   │   │   │   │   ├── s38i3p04.png
+│   │   │   │   │   │   ├── s38n3p04.png
+│   │   │   │   │   │   ├── s39i3p04.png
+│   │   │   │   │   │   ├── s39n3p04.png
+│   │   │   │   │   │   ├── s40i3p04.png
+│   │   │   │   │   │   ├── s40n3p04.png
+│   │   │   │   │   │   ├── tbbn0g04.png
+│   │   │   │   │   │   ├── tbbn3p08.png
+│   │   │   │   │   │   ├── tbgn3p08.png
+│   │   │   │   │   │   ├── tbrn2c08.png
+│   │   │   │   │   │   ├── tbwn3p08.png
+│   │   │   │   │   │   ├── tbyn3p08.png
+│   │   │   │   │   │   ├── tm3n3p02.png
+│   │   │   │   │   │   ├── tp0n0g08.png
+│   │   │   │   │   │   ├── tp0n2c08.png
+│   │   │   │   │   │   ├── tp0n3p08.png
+│   │   │   │   │   │   ├── tp1n3p08.png
+│   │   │   │   │   │   ├── z00n2c08.png
+│   │   │   │   │   │   ├── z03n2c08.png
+│   │   │   │   │   │   ├── z06n2c08.png
+│   │   │   │   │   │   └── z09n2c08.png
+│   │   │   │   │   ├── ref_results.csv
+│   │   │   │   │   └── unused
+│   │   │   │   │       ├── ccwn2c08.png
+│   │   │   │   │       ├── ccwn3p08.png
+│   │   │   │   │       ├── cdfn2c08.png
+│   │   │   │   │       ├── cdhn2c08.png
+│   │   │   │   │       ├── cdsn2c08.png
+│   │   │   │   │       ├── cdun2c08.png
+│   │   │   │   │       ├── ch1n3p04.png
+│   │   │   │   │       ├── ch2n3p08.png
+│   │   │   │   │       ├── cm0n0g04.png
+│   │   │   │   │       ├── cm7n0g04.png
+│   │   │   │   │       ├── cm9n0g04.png
+│   │   │   │   │       ├── cs3n2c16.png
+│   │   │   │   │       ├── cs3n3p08.png
+│   │   │   │   │       ├── cs5n2c08.png
+│   │   │   │   │       ├── cs5n3p08.png
+│   │   │   │   │       ├── cs8n2c08.png
+│   │   │   │   │       ├── cs8n3p08.png
+│   │   │   │   │       ├── ct0n0g04.png
+│   │   │   │   │       ├── ct1n0g04.png
+│   │   │   │   │       ├── cten0g04.png
+│   │   │   │   │       ├── ctfn0g04.png
+│   │   │   │   │       ├── ctgn0g04.png
+│   │   │   │   │       ├── cthn0g04.png
+│   │   │   │   │       ├── ctjn0g04.png
+│   │   │   │   │       ├── ctzn0g04.png
+│   │   │   │   │       ├── f00n0g08.png
+│   │   │   │   │       ├── f00n2c08.png
+│   │   │   │   │       ├── f01n0g08.png
+│   │   │   │   │       ├── f01n2c08.png
+│   │   │   │   │       ├── f02n0g08.png
+│   │   │   │   │       ├── f02n2c08.png
+│   │   │   │   │       ├── f03n0g08.png
+│   │   │   │   │       ├── f03n2c08.png
+│   │   │   │   │       ├── f04n0g08.png
+│   │   │   │   │       ├── f04n2c08.png
+│   │   │   │   │       ├── f99n0g04.png
+│   │   │   │   │       ├── g03n0g16.png
+│   │   │   │   │       ├── g03n2c08.png
+│   │   │   │   │       ├── g03n3p04.png
+│   │   │   │   │       ├── g04n0g16.png
+│   │   │   │   │       ├── g04n2c08.png
+│   │   │   │   │       ├── g04n3p04.png
+│   │   │   │   │       ├── g05n0g16.png
+│   │   │   │   │       ├── g05n2c08.png
+│   │   │   │   │       ├── g05n3p04.png
+│   │   │   │   │       ├── g07n0g16.png
+│   │   │   │   │       ├── g07n2c08.png
+│   │   │   │   │       ├── g07n3p04.png
+│   │   │   │   │       ├── g10n0g16.png
+│   │   │   │   │       ├── g10n2c08.png
+│   │   │   │   │       ├── g10n3p04.png
+│   │   │   │   │       ├── g25n0g16.png
+│   │   │   │   │       ├── g25n2c08.png
+│   │   │   │   │       ├── g25n3p04.png
+│   │   │   │   │       ├── pp0n2c16.png
+│   │   │   │   │       ├── pp0n6a08.png
+│   │   │   │   │       ├── ps1n0g08.png
+│   │   │   │   │       ├── ps1n2c16.png
+│   │   │   │   │       ├── ps2n0g08.png
+│   │   │   │   │       └── ps2n2c16.png
+│   │   │   │   ├── prerelease
+│   │   │   │   │   └── stb_lib.h
+│   │   │   │   ├── resample_test_c.c
+│   │   │   │   ├── resample_test.cpp
+│   │   │   │   ├── resize.dsp
+│   │   │   │   ├── sdf
+│   │   │   │   │   ├── sdf_test_arial_16.png
+│   │   │   │   │   ├── sdf_test.c
+│   │   │   │   │   ├── sdf_test_times_16.png
+│   │   │   │   │   └── sdf_test_times_50.png
+│   │   │   │   ├── stb.c
+│   │   │   │   ├── stb_c_lexer_fuzzer.cpp
+│   │   │   │   ├── stb_cpp.cpp
+│   │   │   │   ├── stb_cpp.dsp
+│   │   │   │   ├── stb.dsp
+│   │   │   │   ├── stb.dsw
+│   │   │   │   ├── stbi_read_fuzzer.c
+│   │   │   │   ├── stblib.dsp
+│   │   │   │   ├── stblib_test.c
+│   │   │   │   ├── stblib_test_companion.c
+│   │   │   │   ├── stb_png.dict
+│   │   │   │   ├── stb_static.c
+│   │   │   │   ├── stretch_test.dsp
+│   │   │   │   ├── test_c_compilation.c
+│   │   │   │   ├── test_c_lexer.c
+│   │   │   │   ├── test_cpp_compilation.cpp
+│   │   │   │   ├── test_ds.c
+│   │   │   │   ├── test_ds_cpp.cpp
+│   │   │   │   ├── test_dxt.c
+│   │   │   │   ├── test_easyfont.c
+│   │   │   │   ├── test_image.c
+│   │   │   │   ├── test_image_write.c
+│   │   │   │   ├── test_perlin.c
+│   │   │   │   ├── test_png_paeth.c
+│   │   │   │   ├── test_png_regress.c
+│   │   │   │   ├── test.sbm
+│   │   │   │   ├── test_siphash.c
+│   │   │   │   ├── test_sprintf.c
+│   │   │   │   ├── test_truetype.c
+│   │   │   │   ├── test_vorbis.c
+│   │   │   │   ├── test_voxel.c
+│   │   │   │   ├── textedit_sample.c
+│   │   │   │   ├── tilemap_editor_integration_example.c
+│   │   │   │   ├── truetype_test_win32.c
+│   │   │   │   └── vorbseek
+│   │   │   │       ├── vorbseek.c
+│   │   │   │       └── vorbseek.dsp
+│   │   │   └── tools
+│   │   │       ├── build_matrix.c
+│   │   │       ├── easy_font_maker.c
+│   │   │       ├── make_readme.c
+│   │   │       ├── make_readme.dsp
+│   │   │       ├── mr.bat
+│   │   │       ├── README.footer.md
+│   │   │       ├── README.header.md
+│   │   │       ├── README.list
+│   │   │       ├── trailing_whitespace.c
+│   │   │       ├── unicode
+│   │   │       │   └── unicode.dsp
+│   │   │       └── unicode.c
+│   │   └── stb-subbuild
+│   │       ├── CMakeCache.txt
+│   │       ├── CMakeFiles
+│   │       │   ├── 3.26.5
+│   │       │   │   └── CMakeSystem.cmake
+│   │       │   ├── cmake.check_cache
+│   │       │   ├── CMakeConfigureLog.yaml
+│   │       │   ├── CMakeDirectoryInformation.cmake
+│   │       │   ├── CMakeRuleHashes.txt
+│   │       │   ├── Makefile2
+│   │       │   ├── Makefile.cmake
+│   │       │   ├── pkgRedirects
+│   │       │   ├── progress.marks
+│   │       │   ├── stb-populate-complete
+│   │       │   ├── stb-populate.dir
+│   │       │   │   ├── build.make
+│   │       │   │   ├── cmake_clean.cmake
+│   │       │   │   ├── compiler_depend.make
+│   │       │   │   ├── compiler_depend.ts
+│   │       │   │   ├── DependInfo.cmake
+│   │       │   │   ├── Labels.json
+│   │       │   │   ├── Labels.txt
+│   │       │   │   └── progress.make
+│   │       │   └── TargetDirectories.txt
+│   │       ├── cmake_install.cmake
+│   │       ├── CMakeLists.txt
+│   │       ├── Makefile
+│   │       └── stb-populate-prefix
+│   │           ├── src
+│   │           │   └── stb-populate-stamp
+│   │           │       ├── stb-populate-build
+│   │           │       ├── stb-populate-configure
+│   │           │       ├── stb-populate-done
+│   │           │       ├── stb-populate-download
+│   │           │       ├── stb-populate-gitclone-lastrun.txt
+│   │           │       ├── stb-populate-gitinfo.txt
+│   │           │       ├── stb-populate-install
+│   │           │       ├── stb-populate-mkdir
+│   │           │       ├── stb-populate-patch
+│   │           │       └── stb-populate-test
+│   │           └── tmp
+│   │               ├── stb-populate-cfgcmd.txt
+│   │               ├── stb-populate-gitclone.cmake
+│   │               ├── stb-populate-gitupdate.cmake
+│   │               └── stb-populate-mkdirs.cmake
+│   ├── libimgui.a
+│   ├── Makefile
+│   └── poker
+├── cards
+│   ├── 10C.png
+│   ├── 10D.png
+│   ├── 10H.png
+│   ├── 10S.png
+│   ├── 2C.png
+│   ├── 2D.png
+│   ├── 2H.png
+│   ├── 2S.png
+│   ├── 3C.png
+│   ├── 3D.png
+│   ├── 3H.png
+│   ├── 3S.png
+│   ├── 4C.png
+│   ├── 4D.png
+│   ├── 4H.png
+│   ├── 4S.png
+│   ├── 5C.png
+│   ├── 5D.png
+│   ├── 5H.png
+│   ├── 5S.png
+│   ├── 6C.png
+│   ├── 6D.png
+│   ├── 6H.png
+│   ├── 6S.png
+│   ├── 7C.png
+│   ├── 7D.png
+│   ├── 7H.png
+│   ├── 7S.png
+│   ├── 8C.png
+│   ├── 8D.png
+│   ├── 8H.png
+│   ├── 8S.png
+│   ├── 9C.png
+│   ├── 9D.png
+│   ├── 9H.png
+│   ├── 9S.png
+│   ├── AC.png
+│   ├── AD.png
+│   ├── AH.png
+│   ├── AS.png
+│   ├── JC.png
+│   ├── JD.png
+│   ├── JH.png
+│   ├── JS.png
+│   ├── KC.png
+│   ├── KD.png
+│   ├── KH.png
+│   ├── KS.png
+│   ├── QC.png
+│   ├── QD.png
+│   ├── QH.png
+│   └── QS.png
+├── CMakeLists.txt
+├── design.md
+├── inc
+│   ├── card.hpp
+│   ├── card_textures.hpp
+│   ├── computer_player.hpp
+│   ├── deck.hpp
+│   ├── game.hpp
+│   ├── gui_app.hpp
+│   ├── gui_player.hpp
+│   ├── gui_state.hpp
+│   ├── handrank.hpp
+│   ├── human_player.hpp
+│   ├── player.hpp
+│   └── pokerhand.hpp
+├── src
+│   ├── card_textures.cpp
+│   ├── computer_player.cpp
+│   ├── deck.cpp
+│   ├── game.cpp
+│   ├── gui_app.cpp
+│   ├── gui_player.cpp
+│   ├── human_player.cpp
+│   ├── main.cpp
+│   ├── player.cpp
+│   └── pokerhand.cpp
+└── tree.txt
+
+115 directories, 908 files

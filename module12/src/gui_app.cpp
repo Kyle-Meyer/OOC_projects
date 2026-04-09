@@ -193,7 +193,7 @@ void runGui()
             ImGui::SetNextWindowPos({(float)winW * 0.5f - 220, (float)winH * 0.5f - 200},
                                     ImGuiCond_Always, {0.5f, 0.5f});
             ImGui::SetNextWindowSize({440, 0});
-            ImGui::Begin("5-Card Draw Poker — Setup",
+            ImGui::Begin("5-Card Draw Poker: Setup",
                          nullptr,
                          ImGuiWindowFlags_NoResize |
                          ImGuiWindowFlags_NoMove   |
@@ -328,7 +328,7 @@ void runGui()
             // -- BET panel --
             if (curAction == GuiAction::Bet)
             {
-                ImGui::Begin("Your Turn — Bet", nullptr,
+                ImGui::Begin("Your Turn, Bet", nullptr,
                              ImGuiWindowFlags_NoResize  |
                              ImGuiWindowFlags_NoMove    |
                              ImGuiWindowFlags_NoCollapse);
@@ -400,7 +400,7 @@ void runGui()
             // -- DISCARD panel --
             else if (curAction == GuiAction::Discard)
             {
-                ImGui::Begin("Your Turn — Discard", nullptr,
+                ImGui::Begin("Your Turn, Discard", nullptr,
                              ImGuiWindowFlags_NoResize  |
                              ImGuiWindowFlags_NoMove    |
                              ImGuiWindowFlags_NoCollapse);
